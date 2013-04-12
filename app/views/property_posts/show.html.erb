@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @property_post.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @property_post.description %>
+</p>
+
+<p>
+  <b>Rent:</b>
+  <%= @property_post.rent %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @property_post.user.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_property_post_path(@property_post) %> |
+<%= link_to 'Back', property_posts_path %>

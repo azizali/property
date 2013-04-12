@@ -1,0 +1,29 @@
+<h1>Listing property_posts</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Rent</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @property_posts.each do |property_post| %>
+  <tr>
+    <td><%= property_post.name %></td>
+    <td><%= property_post.description %></td>
+    <td><%= property_post.rent %></td>
+    <td><%= property_post.user.name %></td>
+    <td><%= link_to 'Show', property_post %></td>
+    <td><%= link_to 'Edit', edit_property_post_path(property_post) %></td>
+    <td><%= link_to 'Destroy', property_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Property post', new_property_post_path %>
